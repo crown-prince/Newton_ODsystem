@@ -1,0 +1,96 @@
+/**
+ * Unicorn Admin Template
+ * Diablo9983 -> diablo9983@gmail.com
+**/
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+body {
+	background-color: #444444;
+	background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#555555), to(#111111));
+	background-image: -webkit-linear-gradient(top, #555555 0%, #111111 100%);
+    background-image: -moz-linear-gradient(top, #555555 0%, #111111 100%);
+    background-image: -ms-linear-gradient(top, #555555 0%, #111111 100%);
+    background-image: -o-linear-gradient(top, #555555 0%, #111111 100%);
+    background-image: linear-gradient(top, #555555 0%, #111111 100%);
+    padding: 0;
+    margin: 0;
+}
+.box {text-align: center; font-family: Tahoma, Geneva, sans-serif; font-size: 13px; width: 550px; margin-right: auto; margin-left: auto; padding: 1px; color: #3a87ad; background-color: #bce8f1; text-shadow: 0 1px 0 rgba(255,255,255,0.5);border-radius: 4px;}
+.box #title { background-color: #d9edf7; height: 30px; text-align: left; line-height: 30px; font-size: 13px; margin: 0px; padding-left: 10px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #bce8f1; }
+.box #close a{ margin-left:460px; text-decoration:none;}
+.box #content { background-color: #FFF; color: #666666; padding: 50px 0; border-radius: 0px 0px 4px 4px; text-shadow: 0 1px 0 rgba(255,255,255,0.5);}
+.box #content p { font-size: 16px; margin: 0; padding: 0; }
+.box #content input[type="text"]{ margin-top:10px; width:300px;}
+.box #content p a {font-size: 16px; margin-top: 15px; color: #09F; text-decoration: none; }
+.box #content p a:hover { color: #F33; text-decoration: underline; }
+#logo, #loginbox, #adminloginbox, #admineditbox {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+#logo {
+    padding: 20px 0 20px 5px;
+}
+#logo img {
+    width: 215px;
+    margin: 0 auto;
+    display: block;
+}
+#loginbox {
+    height: 196px;
+	background: #ffffff;
+    box-shadow: 0 0 4px #000000;
+    border-radius: 7px;
+    overflow: hidden !important;
+    text-align: center;
+    position: relative;   
+}
+#adminloginbox {
+    height: 240px;
+	background: #ffffff;
+    box-shadow: 0 0 4px #000000;
+    border-radius: 7px;
+    overflow: hidden !important;
+    text-align: center;
+    position: relative;   
+}
+#admineditbox{
+    height: 277px;
+	background: #ffffff;
+    box-shadow: 0 0 4px #000000;
+    border-radius: 7px;
+    overflow: hidden !important;
+    text-align: center;
+    position: relative;  
+}
+#loginbox form, #adminloginbox form, #admineditbox form {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+#loginbox p, #adminloginbox p, #admineditbox p{
+    margin-top: 20px;
+    padding: 0 20px;
+}
+.shake{ color:#F00;-webkit-animation: x-spin 1s ease both;-moz-animation: x-spin 1s ease both;-o-animation: x-spin 1s ease both;}
+.shake span{ color:#39F;}
+#loginbox .form-actions, #adminloginbox .form-actions, #admineditbox .form-actions{
+	padding: 14px 20px 15px;
+}
+.buttn{border:none; background:url(../img/return.png) no-repeat; width:110px; height:31px; position:relative; cursor:pointer;}
+.buttn:hover{background-position:0 -31px}
+.copyright{ font-size:12px; color: #999;}
+.copyright a{ text-decoration:none; color: #999;}
+.yaoqingmacont{border:2px dotted #bbb; background:#fff; border-radius:5px; box-shadow:1px 2px 5px #CCC; margin:20px; padding:15px; text-align:center;}
+.yaoqingmacont li{ padding:3px; border-bottom:1px solid #E2E2E2}
+@media (max-width: 480px){
+    #logo, #loginbox, #adminloginbox, #admineditbox{
+        width: 80%; 
+    }    
+}

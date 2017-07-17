@@ -1,0 +1,93 @@
+body {
+  background: url(background.jpg);
+}
+
+.radmenu {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.radmenu > a {
+  top: calc(50% - 60px);
+  left: calc(50% - 60px);
+}
+.radmenu > a.show {
+  display: flex !important;
+}
+.radmenu li {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition: all 1s ease;
+}
+.radmenu a {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 120px;
+  display: none;
+  text-decoration: none;
+  color: #333;
+  transition: all 1s ease;
+  box-shadow: 0 0 15px #222;
+  font-family: "segoe ui";
+  font-weight: 200;
+  font-size: 16px;
+}
+.radmenu .selected {
+  background: rgba(51, 51, 51, 0.9);
+  display: flex;
+  top: calc(50% - 60px);
+  left: calc(50% - 60px);
+  color: #f1f1f1;
+  box-shadow: 0 0 10px #f1f1f1;
+}
+.radmenu .selected + ul > li:nth-child(1) {
+  -webkit-transform: rotate(72deg) translateX(100px);
+  transform: rotate(72deg) translateX(100px);
+}
+.radmenu .selected + ul > li:nth-child(1) > a {
+  -webkit-transform: rotate(-72deg);
+  transform: rotate(-72deg);
+}
+.radmenu .selected + ul > li:nth-child(2) {
+  -webkit-transform: rotate(144deg) translateX(100px);
+  transform: rotate(144deg) translateX(100px);
+}
+.radmenu .selected + ul > li:nth-child(2) > a {
+  -webkit-transform: rotate(-144deg);
+  transform: rotate(-144deg);
+}
+.radmenu .selected + ul > li:nth-child(3) {
+  -webkit-transform: rotate(216deg) translateX(100px);
+  transform: rotate(216deg) translateX(100px);
+}
+.radmenu .selected + ul > li:nth-child(3) > a {
+  -webkit-transform: rotate(-216deg);
+  transform: rotate(-216deg);
+}
+.radmenu .selected + ul > li:nth-child(4) {
+  -webkit-transform: rotate(288deg) translateX(100px);
+  transform: rotate(288deg) translateX(100px);
+}
+.radmenu .selected + ul > li:nth-child(4) > a {
+  -webkit-transform: rotate(-288deg);
+  transform: rotate(-288deg);
+}
+.radmenu .selected + ul > li:nth-child(5) {
+  -webkit-transform: rotate(360deg) translateX(100px);
+  transform: rotate(360deg) translateX(100px);
+}
+.radmenu .selected + ul > li:nth-child(5) > a {
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+.radmenu .selected + ul > li > a {
+  display: flex;
+}
