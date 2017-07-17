@@ -25,7 +25,8 @@
 ### 3.牛顿的功能解析：
 
 展示端：以合适的可视化效果，展现黑客攻击的后果 <br>
-           *  邀请码生成系统（通过邀请码，连接众多独立展示系统与唯一的攻击端系统） <br> 
+           *  数据库存储信息、服务器信息统一展示在展示端首页，便于展示端了解相关信息 <br>
+           *  邀请码生成系统（通过邀请码，连接众多独立展示系统与唯一的攻击端系统） <br> 
            *  各自独立的存在漏洞的展示端页面  <br>
 <br>
 攻击端：集成式一键模拟黑客攻击 <br>
@@ -73,5 +74,28 @@ https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E6%94%BB%E5%
 3.出现配置成功字样，则以成功使攻击端、展示端建立了连接，可以开始相关演示了<br>
 
 
+### 4.牛顿的使用方式讲解：
+以集成的SQL注入攻击为例：
+展示端的(edit.php）编辑页面，需要登录才可以进编辑，但因为如下代码：
 
+          $code = $_POST['code'];		
+          $username = $_POST['user'];   //制造SQL注入条件
+          $password = $_POST['password'];  //制造SQL注入条件
+
+          //包含数据库连接文件  
+          include('conn.php');  
+          //检测用户名及密码是否正确  
+          $sql="select * from sqltest where name='$username' and password='$password'"; //制造SQL注入条件
+          $query = mysql_query($sql);
+          $arr = mysql_fetch_array($query);
+
+          if(is_array($arr))
+          {
+
+导致了SQL注入漏洞的存在，攻击端通过(put.php)集成了完成注入、篡改网站页面的漏洞利用代码，通过点击攻击端【突破权限，修改页面】 <br>
+按钮将直接完成攻击，通过【查看修改效果】可以看到是否攻击成功，展示端（hack.php）页面可以看到已经留下了黑客攻击的信息 <br>
+
+![](https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E7%82%B9%E9%80%89%E5%8A%A8%E6%80%81.gif)
+![](
+https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E5%B1%95%E7%A4%BA%E7%AB%AF%E5%B1%95%E7%A4%BA%E8%A2%AB%E9%BB%91%E6%95%88%E6%9E%9C.PNG)
 
