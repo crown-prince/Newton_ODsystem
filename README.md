@@ -32,10 +32,10 @@
 *  各自独立的存在漏洞的展示端页面  <br>
 <br>
 攻击端：集成式一键模拟黑客攻击 <br>
-*  sql注入演示 <br>
-*  存储型XSS演示<br>
-*  环境配置（实现一个攻击端，可以为多个展示端的独立系统，进行展示）<br>
-*  自定义功能（可自主增加新的漏洞演示环境于系统中）<br>
+* sql注入演示 <br>
+* 存储型XSS演示<br>
+* 环境配置（实现一个攻击端可以为展示端的多个独立系统，进行展示）<br>
+* 自定义功能（可自主增加新的漏洞演示环境于系统中）<br>
 
 ![](https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/OD%E8%BF%9E%E6%8E%A5.PNG)         
 
@@ -100,3 +100,8 @@ https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E6%94%BB%E5%
 ![](
 https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E5%B1%95%E7%A4%BA%E7%AB%AF%E5%B1%95%E7%A4%BA%E8%A2%AB%E9%BB%91%E6%95%88%E6%9E%9C.PNG)
 
+### License
+
+The MIT License. <br><br>
+
+Copyright (c) 2017 繁星科技_Wind Punish安全实验室_crown prince <br>
