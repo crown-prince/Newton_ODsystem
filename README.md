@@ -32,10 +32,10 @@
 *  各自独立的存在漏洞的展示端页面  <br>
 <br>
 攻击端：集成式一键模拟黑客攻击 <br>
-* sql注入演示 <br>
-* 存储型XSS演示<br>
- * 环境配置（实现一个攻击端，可以为多个展示端的独立系统，进行展示）<br>
- * 自定义功能（可自主增加新的漏洞演示环境于系统中）<br>
+*  sql注入演示 <br>
+*  存储型XSS演示<br>
+*  环境配置（实现一个攻击端，可以为多个展示端的独立系统，进行展示）<br>
+*  自定义功能（可自主增加新的漏洞演示环境于系统中）<br>
 
 ![](https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/OD%E8%BF%9E%E6%8E%A5.PNG)         
 
@@ -63,8 +63,8 @@
 ![](
 https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E7%94%9F%E6%88%90%E9%82%80%E8%AF%B7%E7%A0%81.PNG)
 
-5.点击生成邀请码，将在展示端网站目录下生成独立的一套漏洞展示文件，假设当前邀请码为xa4yma2DI08gr5ldfK8fhLlAfLe4NI <br>
-展示端配置完成 <br>
+5.点击生成邀请码，将在展示端网站目录下生成独立的一套漏洞展示文件  <br>
+假设当前邀请码为xa4yma2DI08gr5ldfK8fhLlAfLe4NI，展示端配置完成 <br>
 
 **攻击端**： <br>
 为便于叙述，以下假定展示端IP地址为192.168.0.103 <br>
