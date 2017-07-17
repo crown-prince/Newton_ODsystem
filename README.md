@@ -1,5 +1,5 @@
 # Newton_ODsystem
-Newton Offensive and defensive system <br>
+牛顿信息安全攻防展示系统：Newton Offensive and defensive system <br>
 功能概述：攻击端一键完成攻击演示，展示端通过更直接的方式展现黑客攻击威胁，可自主增加相应漏洞 <br>
 >关于牛顿，我想说的一些话（非干货，可略过）：在长亭陈宇森大牛的一篇见闻分享里，我记下了这样的一句话：未来的安全发展，要让不懂安全的人，快速搞清楚负责安全的人做了什么。由此，牛顿项目诞生了，定名为牛顿，是因为众所周知，牛顿是近代物理学的奠基人，因为他对万有引力和三大运动定律的描述，物理学走向了普及，世界加快了发展。希望牛顿项目，也能够继承这份责任，但牛顿项目只是一个小小的凸起点，期待和更多同志们，一起努力，安全任重道远，白帽子的名字，我们来定义。
 
@@ -27,9 +27,9 @@ Newton Offensive and defensive system <br>
 ### 3.牛顿的功能解析：
 
 展示端：以合适的可视化效果，展现黑客攻击的后果 <br>
-           *  数据库存储信息、服务器信息统一展示在展示端首页，便于展示端了解相关信息 <br>
-           *  邀请码生成系统（通过邀请码，连接众多独立展示系统与唯一的攻击端系统） <br> 
-           *  各自独立的存在漏洞的展示端页面  <br>
+*  数据库存储信息、服务器信息统一展示在展示端首页，便于展示端了解相关信息 <br>
+*  邀请码生成系统（通过邀请码，连接众多独立展示系统与唯一的攻击端系统） <br> 
+*  各自独立的存在漏洞的展示端页面  <br>
 <br>
 攻击端：集成式一键模拟黑客攻击 <br>
            * sql注入演示 <br>
@@ -46,17 +46,18 @@ Newton Offensive and defensive system <br>
 1.将【展示端文件夹】下全部文件复制到php环境根目录中 <br>
 2.在数据库中创建test和adminpanel两个数据库，并分别导入test.sql（建立漏洞环境）、adminpanel.sql（生成攻击端与展示端邀请码），之后删除两个数据文件 <br>
 3.在Adminpanel/conn.php文件中配置数据库信息，在afnalnfawnaj/conn.php文件中配置数据库信息 （样例如下）<br> 
-           <?php
-                //数据库链接文件
-                @session_start();
-                $host='localhost';//数据库服务器
-                $user='root';//数据库用户名
-                $password='root';//数据库密码
-                $database='adminpanel';//数据库名
-                $conn=@mysql_connect($host,$user,$password) or die('数据库连接失败！');
-                @mysql_select_db($database) or die('没有找到数据库！');
-                mysql_query("set names 'utf-8'");
-          ?>           
+       
+       <?php
+            //数据库链接文件
+            @session_start();
+            $host='localhost';//数据库服务器
+            $user='root';//数据库用户名
+            $password='root';//数据库密码
+            $database='adminpanel';//数据库名
+            $conn=@mysql_connect($host,$user,$password) or die('数据库连接失败！');
+            @mysql_select_db($database) or die('没有找到数据库！');
+            mysql_query("set names 'utf-8'");
+       ?>           
 4.进入http://192.168.183.131/adminpanel/admin.php 管理系统，生成邀请码，初始用户为admin admin登陆码123456 <br>
 以后可以在管理系统中修改用户信息、多次生成邀请码 <br>
 ![](
