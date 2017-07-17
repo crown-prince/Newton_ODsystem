@@ -9,8 +9,8 @@
 
 - 企业安全部门成员向企业内其他部门成员、领导，展示黑客攻击的威胁，演示漏洞的危害，更好的促进企业安全发展
 - 信息安全专业人员，向非相关专业小伙伴展示漏洞的危害，进行信息安全知识科普
-- 安全产品销售人员更好的解读“安全”
-<br>
+- 安全产品销售人员更好的解读“安全”<br>
+
 ### 2.牛顿界面初览：
 
 >攻击端（科技感风格）：
@@ -25,7 +25,7 @@
 ![](https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E7%89%9B%E9%A1%BF4.PNG)
 
 ----   
-<br>
+
 ### 3.牛顿的功能解析：
 
 展示端：以合适的可视化效果，展现黑客攻击的后果 <br>
@@ -39,9 +39,9 @@
 *  环境配置（实现一个攻击端可以为展示端的多个独立系统，进行展示）<br>
 *  自定义功能（可自主增加新的漏洞演示环境于系统中）<br>
 
-![](https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/OD%E8%BF%9E%E6%8E%A5.PNG)         
+![](https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/OD%E8%BF%9E%E6%8E%A5.PNG)       <br><br>  
 
-<br>
+
 ### 4.牛顿的安装与配置：
 **展示端**： <br>
 为便于叙述，以下假定展示端IP地址为192.168.183.131, 数据库初始用户名、密码为root <br>
@@ -75,8 +75,8 @@ https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E7%94%9F%E6%
 ![](
 https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E6%94%BB%E5%87%BB%E7%AB%AF%E8%BF%9E%E6%8E%A5.PNG)
 3.出现配置成功字样，则以成功使攻击端、展示端建立了连接，可以开始相关演示了<br>
-
 <br>
+
 ### 5.牛顿的使用方式讲解：
 以集成的SQL注入攻击为例：
 展示端的(edit.php）编辑页面，需要登录才可以进编辑，但因为如下代码：
@@ -100,9 +100,8 @@ https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E6%94%BB%E5%
 
 ![](https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E7%82%B9%E9%80%89%E5%8A%A8%E6%80%81.gif)
 ![](
-https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E5%B1%95%E7%A4%BA%E7%AB%AF%E5%B1%95%E7%A4%BA%E8%A2%AB%E9%BB%91%E6%95%88%E6%9E%9C.PNG)
+https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E5%B1%95%E7%A4%BA%E7%AB%AF%E5%B1%95%E7%A4%BA%E8%A2%AB%E9%BB%91%E6%95%88%E6%9E%9C.PNG) <br>
 
-<br>
 ### License
 
 The MIT License. <br><br>
