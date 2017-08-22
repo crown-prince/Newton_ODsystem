@@ -8,13 +8,10 @@ if(!isset($_SESSION['username']))
 <title>修改密码请先登录！</title>
 <link rel="stylesheet" href="css/unicorn.login.css" />
 </head>
-<body>
-<div id="logo"><img src="img/logo.png" alt="管理系统" /></div>
+<body> <br><br>
+<div id="logo"><img src="img/logo.png" alt="管理系统" /> </div> <br><br><br>
 <div class="box">
-  <div id="title">温馨提示<span id="close"><a href="###" onclick="windowclose()">X</a></span></div> 
-  <div id="content">
 <p>若要修改密码，请先<a href="admin.php">登录</a>！</p>  
-</div>
 <span class="copyright">Copyright &copy; 2017.环宇繁星科技有限公司Wind Punish安全实验室 All rights reserved.</span>
 </div>
 <script type="text/javascript">
@@ -82,33 +79,38 @@ function CheckForm(login){
 <div id="admineditbox">
 <form id="login" name="login" method="post" action="">
 <?php
-if(isset($_POST['submit']) && $_POST['submit'])
-{
-$iadmin=$_POST["iusername"];
-$ipwd1=md5(sha1($_POST["ipassword1"]));
-$ipwd2=md5(sha1($_POST["ipassword2"]));
-$idlm= $_POST["idengluma"];
-	if ($iadmin==""||$ipwd1==""||$ipwd2==""||$idlm=="") {
-	echo'<p class="shake">请不要填写空值！</p>';	
-	}else{
-		if ($ipwd1==$ipwd2) {
-		$isql="update admin set username='$iadmin',password='$ipwd1',dengluma='$idlm' where id='1'";
-			if(mysql_query($isql)){
-			session_destroy();
-			echo'<meta http-equiv="Refresh" content="5; url=admin.php" /> 
-			<style>.control-group,.form-actions{display:none !important;}#admineditbox{height:60px !important;}</style>
-			<p>修改成功！请<a href="admin.php">重新登录</a>！</p>';	
-			}else{
-			echo'<p class="shake">数据修改失败！</p>';		
+	require_once ("conn.php");
+	if(isset($_POST['submit']) && $_POST['submit'])
+	{
+		$iadmin=$_POST["iusername"];
+		$ipwd1=md5(sha1($_POST["ipassword1"]));
+		$ipwd2=md5(sha1($_POST["ipassword2"]));
+		$idlm= $_POST["idengluma"];
+			if ($iadmin == "" || $ipwd1 == "" || $ipwd2 == "" || $idlm == "") {
+			echo'<p class="shake">请不要填写空值！</p>';	
 			}
-		}else{
-		echo'<p class="shake">两次密码输入不一致！</p>';
-		}
+			else{
+				if ($ipwd1==$ipwd2) {
+				$isql="update admin set username='$iadmin',password='$ipwd1',dengluma='$idlm' where id='1'";
+					if(mysqli_query($conn, $isql)){
+							session_destroy();
+								echo'<meta http-equiv="Refresh" content="5; url=admin.php" /> 
+								<style>.control-group,.form-actions{display:none !important;}#admineditbox{height:60px !important;}</style>
+								<p>修改成功！请<a href="admin.php">重新登录</a>！</p>';	
+					}
+					else{
+					    echo'<p class="shake">数据修改失败！</p>';		
+					}
+				}
+				else{
+				   echo'<p class="shake">两次密码输入不一致！</p>';
+				}
+			}
 	}
-}else{
-	echo'<p>修改管理帐号密码和登录码</p>';
-	}
+
+	
 ?>
+<br><br>
 	<div class="control-group">
 			<div class="controls">
 				<div class="input-prepend"> <span class="add-on"><i class="icon-user"></i></span>

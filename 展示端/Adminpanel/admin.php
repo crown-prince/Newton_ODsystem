@@ -5,17 +5,14 @@ if(isset($_SESSION['username']))
  	echo '<!doctype html>
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="Refresh" content="5; url=yaoqingma.php" />
-<title>请不要重复登录！</title>
+<meta http-equiv="Refresh" content="5; url=make.php" />
+<title>请勿重复登录！</title>
 <link rel="stylesheet" href="css/unicorn.login.css" />
 </head>
-<body>
-<div id="logo"><img src="img/logo.png" alt="牛顿信息安全攻防展示系统-展示端" /></div>
+<body> <br><br>
+<div id="logo"><img src="img/logo.png" alt="牛顿信息安全攻防展示系统-展示端" /></div> <br><br><br>
 <div class="box">
-  <div id="title">温馨提示<span id="close"><a href="###" onclick="windowclose()">X</a></span></div> 
-  <div id="content">
-<p>您已经登录了，请不要重复登录！<a href="yaoqingma.php">邀请码管理</a></p>  
-</div>
+<p>您已登录，请勿重复登录！<a href="make.php">邀请码管理</a></p>  
 <span class="copyright">Copyright &copy; 2017.环宇繁星科技有限公司Wind Punish安全实验室 All rights reserved.</span>
 </div>
 <script type="text/javascript">
@@ -55,24 +52,25 @@ exit();
 <div id="adminloginbox">
 <form id="login" name="login" method="post" action="">
 <?php
-if(isset($_POST['submit']) && $_POST['submit']) 
-{
-$admin=$_POST["username"];
-$pwd=md5(sha1($_POST["password"]));
-$dlm= $_POST["dengluma"];
-$sql="select * from admin where username='$admin' and password='$pwd' and dengluma='$dlm'";
-$rs=mysql_query($sql);
-	if(mysql_num_rows($rs)==1){
-	$_SESSION['username']=$admin;
-	echo'<meta http-equiv="Refresh" content="5; url=yaoqingma.php" /> 
-	<style>.control-group,.form-actions{display:none !important;}#adminloginbox{height:60px !important;}</style>
-<p>登录成功，欢迎回来！<a href="yaoqingma.php">点击马上跳转</a>！</p>';	
-	}else{
-	echo'<p class="shake">用户名或密码或登录码输入错误</p>';		
-	}
-}else{
-	echo'<p>请先登录</p>';
-	}
+    require_once ("conn.php");
+	if(isset($_POST['submit']) && $_POST['submit']) 
+	{
+		$admin = $_POST["username"];
+		$pwd = md5(sha1($_POST["password"]));
+		$dlm = $_POST["dengluma"];
+		$sql ="select * from admin where username='$admin' and password='$pwd' and dengluma='$dlm'";
+		$rs = mysqli_query($conn, $sql);
+		if(mysqli_num_rows($rs) == 1){
+		$_SESSION['username'] = $admin;
+			echo'<meta http-equiv="Refresh" content="5; url=make.php" /> 
+			<style>.control-group,.form-actions{display:none !important;}#adminloginbox{height:60px !important;}</style>
+		<p>登录成功！<a href="make.php">点击马上跳转</a>！</p>';	
+		}else{
+		echo'<p class="shake">用户名或密码或登录码输入错误</p>';		
+			}
+		}else{
+			echo'<p>请先登录</p>';
+		}
 ?>
 	<div class="control-group">
 			<div class="controls">
