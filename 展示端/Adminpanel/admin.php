@@ -58,19 +58,25 @@ exit();
 		$admin = $_POST["username"];
 		$pwd = md5(sha1($_POST["password"]));
 		$dlm = $_POST["dengluma"];
+		
+		$admin = mysqli_real_escape_string($conn, $admin);
+		$dlm = mysqli_real_escape_string($conn, $dlm);
+		
 		$sql ="select * from admin where username='$admin' and password='$pwd' and dengluma='$dlm'";
-		$rs = mysqli_query($conn, $sql);
-		if(mysqli_num_rows($rs) == 1){
+		$rs = @mysqli_query($conn, $sql);
+		if(@mysqli_num_rows($rs) == 1){
 		$_SESSION['username'] = $admin;
 			echo'<meta http-equiv="Refresh" content="5; url=make.php" /> 
 			<style>.control-group,.form-actions{display:none !important;}#adminloginbox{height:60px !important;}</style>
 		<p>登录成功！<a href="make.php">点击马上跳转</a>！</p>';	
-		}else{
-		echo'<p class="shake">用户名或密码或登录码输入错误</p>';		
-			}
-		}else{
-			echo'<p>请先登录</p>';
 		}
+		else{
+		    echo'<p class="shake">用户名或密码或登录码输入错误</p>';		
+		}
+	}
+	else{
+	    echo'<p>请先登录</p>';
+	}
 ?>
 	<div class="control-group">
 			<div class="controls">

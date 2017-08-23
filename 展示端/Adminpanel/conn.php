@@ -1,6 +1,6 @@
 <?php
 //数据库链接文件
-@session_start();
+    @session_start();
 	$host = 'localhost';//数据库服务器
 	$user = 'root';//数据库用户名
 	$password = 'root';//数据库密码

@@ -77,7 +77,7 @@ $sql = "insert into yaoqingma(yaoqingma,time) values('$yaoqingma','$thetime')";
 				   copy("../af89c2ab0ebed7db/edit.php", "../$yaoqingma/edit.php");
 				   copy("../af89c2ab0ebed7db/makepage.php", "../$yaoqingma/makepage.php");
 				   copy("../af89c2ab0ebed7db/liuyan.php", "../$yaoqingma/liuyan.php");
-				   copy("../af89c2ab0ebed7db/style.css", "../$yaoqingma/style.css"");
+				   copy("../af89c2ab0ebed7db/style.css", "../$yaoqingma/style.css");
 				 }
 			 }
 			 else
