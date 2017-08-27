@@ -64,9 +64,8 @@
 https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/管理系统.PNG)
 ![](
 https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/邀请码.PNG)
-
-5.点击生成邀请码，将在展示端网站目录下生成独立的一套漏洞展示文件  <br>
-假设当前邀请码为xa4yma2DI08gr5ldfK8fhLlAfLe4NI，展示端配置完成 <br>
+<br>
+5.点击生成邀请码，将在展示端网站目录下生成独立的一套漏洞展示文件，假设当前邀请码为xa4yma2DI08gr5ldfK8fhLlAfLe4NI，展示端配置完成 <br>
 
 **攻击端**： <br>
 为便于叙述，以下假定展示端IP地址为192.168.0.103 <br>
@@ -101,8 +100,7 @@ https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E6%94%BB%E5%
 
 ![](https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E7%82%B9%E9%80%89%E5%8A%A8%E6%80%81.gif)
 ![](
-https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E5%B1%95%E7%A4%BA%E7%AB%AF%E5%B1%95%E7%A4%BA%E8%A2%AB%E9%BB%91%E6%95%88%E6%9E%9C.PNG) <br>
-
+https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E5%B1%95%E7%A4%BA%E7%AB%AF%E5%B1%95%E7%A4%BA%E8%A2%AB%E9%BB%91%E6%95%88%E6%9E%9C.PNG) <br><br><br>
 ### License
 
 The MIT License. <br><br>
