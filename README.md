@@ -61,6 +61,7 @@ $conn = mysqli_connect($host, $user, $password, $database) or die('数据库连�
 ```
 4. 进入 http://192.168.183.131/adminpanel/admin.php 管理系统，生成邀请码，初始用户为 admin/admin 登陆码 root
 以后可以在管理系统中修改用户信息、多次生成邀请码
+
 ![](https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/管理系统.PNG)
 ![](https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/邀请码.PNG)
 
