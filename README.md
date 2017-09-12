@@ -56,13 +56,13 @@ $host = 'localhost';// 数据库服务器
 $user = 'root';// 数据库用户名
 $password = 'root';// 数据库密码
 $database = 'adminpanel';// 数据库名
-$conn = mysqli_connect($host, $user, $password, $database) or die(' 数据库连接失败！');
+$conn = mysqli_connect($host, $user, $password, $database) or die('数据库连接失败');
 ?>
 ```
 4. 进入 http://192.168.183.131/adminpanel/admin.php 管理系统，生成邀请码，初始用户为 admin/admin 登陆码 root
 以后可以在管理系统中修改用户信息、多次生成邀请码
-![](https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/ 管理系统 .PNG)
-![](https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/ 邀请码 .PNG)
+![](https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/管理系统.PNG)
+![](https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/邀请码.PNG)
 
 5. 点击生成邀请码，将在展示端网站目录下生成独立的一套漏洞展示文件，假设当前邀请码为 xa4yma2DI08gr5ldfK8fhLlAfLe4NI，展示端配置完成
 
@@ -70,8 +70,7 @@ $conn = mysqli_connect($host, $user, $password, $database) or die(' 数据库连
 为便于叙述，以下假定展示端 IP 地址为 192.168.0.103
 1. 将【攻击端文件夹】下全部文件复制到 php 环境根目录中
 2. 点击 Start、点选环境配置，输入展示端`域名/IP 地址`，以及展示端生成的邀请码之一
-![](
-https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E6%94%BB%E5%87%BB%E7%AB%AF%E8%BF%9E%E6%8E%A5.PNG)
+![](https://github.com/crown-prince/Newton_ODsystem/blob/master/MD_pic/%E6%94%BB%E5%87%BB%E7%AB%AF%E8%BF%9E%E6%8E%A5.PNG)
 3. 出现配置成功字样，则以成功使攻击端、展示端建立了连接，可以开始相关演示了
 
 
