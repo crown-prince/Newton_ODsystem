@@ -1,0 +1,122 @@
+﻿@charset "utf-8";
+/*登录页面样式*/
+.logHead {
+	width: 100%;
+	height: 140px;
+	background-color: #4390b9;
+}
+#hides{display: none;}
+.logHead img {
+	margin-left: 20%;
+	margin-top: 32px;
+}
+
+.logDiv {
+	width: 110%;
+	position: relative;
+}
+
+.logDiv img.logBanner {
+	width: 100%;
+	overflow: hidden;
+}
+
+.logDiv .logGet {
+	width: 368px;
+	height: 308px;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 10%;
+	right: 20%;
+}
+
+.logDiv .logGet .logDtip {
+	width: 88%;
+	border-bottom: 1px solid #ee7700;
+	margin: 0px auto;
+	margin-bottom: 40px
+}
+
+.logDiv .logGet .lgD {
+	width: 86%;
+	margin: 0px auto;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.logDiv .logGet .lgD img.img1 {
+	position: absolute;
+	top: 12px;
+	left: 8px;
+}
+
+.logDiv .logGet .lgD input {
+	width: 100%;
+	height: 42px;
+	text-indent: 2.5rem;
+}
+
+.logDiv .logGet .lgD input.getYZM {
+	width: 160px;
+	display: inline-block;
+}
+
+.logDiv .logGet .lgD .logYZM {
+	width: 100px;
+	height: 46px;
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	top: 18px;
+}
+
+.logDiv .logGet .lgD .logYZM img.yzm {
+	width: 90%;
+}
+
+.logDiv .logGet .logD2 {
+	margin-top: -20px;
+}
+
+.logDiv .logGet .logD .p1 {
+	display: inline-block;
+	font-size: 28px;
+	margin-top: 30px;
+}
+
+.logDiv .logGet .logD .p2 {
+	display: inline-block;
+	font-size: 14px;
+	margin-top: 45px;
+	float: right;
+	background-color: #4390b9;
+}
+
+.logDiv .logC {
+	width: 86%;
+	margin: 0px auto;
+	margin-top: 30px;
+}
+
+.logDiv .logC button {
+	width: 100%;
+	height: 45px;
+	background-color: #4390b9;
+	border: none;
+	color: white;
+	font-size: 18px;
+}
+
+.logFoot {
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	background-color: #FFFFFF;
+}
+
+.logFoot .p1 {
+	display: inline-block;
+	font-size: 15px;
+	margin-top: 30px;
+}
+
